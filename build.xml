@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="testreport" name="IBAN_Project">
+<target name="SoapUI">
+<exec dir="." executable="C:\Program Files\SmartBear\SoapUI-5.5.0\bin\testrunner.bat">
+<arg line="-r -a -j -o -f 'C:\Users\jovid\Downloads\TS_Team3_SOAP_Iban\TS_Team3_SOAP_Iban' -sTest Suite-Iban 'C:\Users\jovid\Downloads\TS_Team3_SOAP_Iban\TS_Team3_SOAP_Iban\Iban.xml '">
+
+</arg>
+
+</exec>
+</target>
+<target name="testreport" depends="SoapUI">
+<junitreport todir="C:\Users\jovid\Downloads\TS_Team3_SOAP_Iban\TS_Team3_SOAP_Iban">
+<fileset dir="C:\Users\jovid\Downloads\TS_Team3_SOAP_Iban\TS_Team3_SOAP_Iban">
+<include name="TEST-*.xml"/>
+</fileset>
+<report todir="C:\Users\jovid\Downloads\TS_Team3_SOAP_Iban\TS_Team3_SOAP_Iban\HTMLreport">
+</report>
+</junitreport>
+</target>
+</project>
